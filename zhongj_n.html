@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=0.5,user-scalable=no" />
+<title>启辰车展</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="mask" style="display:none;"></div>
+<div class="pop-fx" style="display:none;"></div>
+<div class="wrap">
+    <div class="part3">
+    	<h4 class="gxi">恭喜您，启辰车模已经属于您了！</h4>
+    	<div class="ymdm">
+    		<h5>请保持在本页面，凭页面代码到展台领取礼品！</h5>
+    		<ul>
+    			<li><var>Q</var></li>
+    			<li><var>C</var></li>
+    			<li><var>0</var></li>
+    			<li><var>0</var></li>
+    			<li><var>1</var></li>
+    		</ul>
+    		<p class="car"></p>
+    	</div>
+		<h6 class="hbmz">不够过瘾？</h6>
+		<p class="lzts">那么请留下您的联系方式，就有机会抽取启辰R30、启辰晨风一年使用权大奖！</p>
+		<a class="qckhj" href="data.html"><var>启辰开回家</var></a>
+        <!-- JiaThis 分享 BEGIN -->
+        <div class="jiathis_style_32x32 shares">
+            分享好友积攒人品：
+            <a href="javascript:;" class="wxin"></a>
+            <a href="javascript:;" class="jiathis_button_tsina weibo"></a>
+            <a href="javascript:;" class="jiathis_button_tqq qzone"></a>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1373120114583947" charset="utf-8"></script>
+        <script "text/javascript"> 
+        var jiathis_config = { 
+            url: "http://www.hao123.com", 
+            title: "自定义网页标题 #微博话题#", 
+            summary:"分享的文本摘要",
+            pic:"自定义分享的图片连接地址"
+        } 
+        </script> 
+        <script src="http://v2.jiathis.com/code/jiathis_r.js?move=0"></script> 
+        <!-- JiaThis 分享 END -->
+    </div>
+</div> 
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script>
+$(function() {
+    // part3
+    $(".part3 .wxin").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-fx").fadeIn();
+    });
+    $(".pop-fx").click(function(){
+        $(".mask").fadeOut();
+        $(".pop-fx").fadeOut();
+    });
+})
+</script>
+</body>
+</html>

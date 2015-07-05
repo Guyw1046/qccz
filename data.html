@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=0.5,user-scalable=no" />
+<title>启辰车展</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="mask" style="display:none;"></div>
+<div class="pop-fx" style="display:none;"></div>
+<div class="pop-tj" style="display:none;">
+    <h3 class="tjcg">提交成功！</h3>
+    <p class="text-tj">说好的16:00现场抽奖，启辰展台与您不见不散！</p>
+    <a class="bjbs" href="index.html"><var>不见不散</var></a>
+</div>
+<div class="pop-gz" style="display:none;">
+    <h6 class="hdgz">活动规则：</h6>
+    <p class="text-gz">1、广州车展期间：关注启辰官方微信，参与“码上有礼，辰心放送”活动并留下本人姓名及手机号码，即可参与。</p>
+    <p class="text-gz">2、11月21至11月29日，每天抽取一台启辰R30一年使用权大奖（现场兑奖）.11月29日抽取终极大奖：一台启辰晨风一年使用权。</p>
+    <p class="text-gz">3、每天16:00对当天所有参与者进行抽选，抽中的参与者若不在现场，将取消中奖者资格并继续抽奖（启辰晨风一年使用权除外）。</p>
+    <p class="text-gz">4、终极大奖从车展期间所有参与者中抽取，后续联系进行兑奖。</p>
+    <p class="text-gz">5、此活动每人仅限参与一次；</p>
+    <p class="text-gz">6、本活动最终解释权归东风日产启辰所有。</p>
+    <p class="zdle"><var>知道了</var></p>
+</div>
+<div class="wrap">
+    <div class="part5">
+    	<h4 class="qckhj"><img src="images/qckhj.png" ></h4>
+    	<p class="text5">考验人品的时候到了，只要留下您的姓名和联系方式就有机会抽取启辰R30、启辰晨风一年使用权大奖。</p>
+    	<input class="input1" type="text" value="输入姓名" onFocus="if (value =='输入姓名'){value =''}" onBlur="if (value ==''){value='输入姓名'}">
+    	<input class="input2" type="text" value="输入手机号码" onFocus="if (value =='输入手机号码'){value =''}" onBlur="if (value ==''){value='输入手机号码'}">
+    	<p class="tijiao"><var>提交</var></p>
+    	<a class="hdgz" href="javascript:;"><var>活动规则</var></a>
+        <!-- JiaThis 分享 BEGIN -->
+        <div class="jiathis_style_32x32 shares">
+            分享好友积攒人品：
+            <a href="javascript:;" class="wxin"></a>
+            <a href="javascript:;" class="jiathis_button_tsina weibo"></a>
+            <a href="javascript:;" class="jiathis_button_tqq qzone"></a>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1373120114583947" charset="utf-8"></script>
+        <script "text/javascript"> 
+        var jiathis_config = { 
+            url: "http://www.hao123.com", 
+            title: "自定义网页标题 #微博话题#", 
+            summary:"分享的文本摘要",
+            pic:"自定义分享的图片连接地址"
+        } 
+        </script> 
+        <script src="http://v2.jiathis.com/code/jiathis_r.js?move=0"></script> 
+        <!-- JiaThis 分享 END -->
+    </div>
+</div> 
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script>
+$(function() {
+    // part5
+    $(".part5 .tijiao").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-tj").fadeIn();
+    });
+    $(".part5 .hdgz").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-gz").fadeIn();
+    });
+    $(".pop-gz .zdle").click(function(){
+        $(".mask").fadeOut();
+        $(".pop-gz").fadeOut();
+    });
+    $(".part5 .wxin").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-fx").fadeIn();
+    });
+    $(".pop-fx").click(function(){
+        $(".mask").fadeOut();
+        $(".pop-fx").fadeOut();
+    });
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=0.5,user-scalable=no" />
+<title>启辰车展</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="mask" style="display:none;"></div>
+<div class="pop-fx" style="display:none;"></div>
+<div class="wrap">
+    <div class="part2 changwai">
+    	<h3 class="tou"></h3>
+    	<h4 class="xyun">幸运“触”手可及</h4>
+    	<p class="cjts">轻触任一款启辰车型牌即可参与抽奖</p>
+    	<ul>
+    		<li><a href="javascript:;"><img src="images/qc_01.png" /></a></li>
+            <li class="mar"><a href="javascript:;"><img src="images/qc_02.png" /></a></li>
+            <li><a href="javascript:;"><img src="images/qc_03.png" /></a></li>
+            <li><a href="javascript:;"><img src="images/qc_04.png" /></a></li>
+            <li class="mar"><a href="javascript:;"><img src="images/qc_05.png" /></a></li>
+            <li><a href="javascript:;"><img src="images/qc_06.png" /></a></li>
+    	</ul>
+    </div>
+    <div class="part4" style="display:none;">
+        <h3 class="tou"></h3>
+        <h4 class="hbq">很抱歉</h4>
+        <p class="test4">亲，每个微信号只可参加一次幸运大抽奖，感谢您一直以来对启辰的支持，祝您观展愉快！</p>
+    </div>
+    <div class="part6" style="display:none;">
+        <h3 class="renpin">人品不错哦！</h3>
+        <p class="text6">恭喜您抽中价值10元的手机话费！请留下联系方式，24小时内话费将为您送上，请留意短信，谢谢！</p>
+        <div class="huafei"><img src="images/y10.png" /></div>
+        <p class="text62">请输入手机号码24小时内为您充值</p>
+        <input class="input3" type="text" value="输入手机号码" onFocus="if (value =='输入手机号码'){value =''}" onBlur="if (value ==''){value='输入手机号码'}">
+        <a class="qrtj" href="javascript:;"><var>确认提交</var></a>
+        <!-- JiaThis 分享 BEGIN -->
+        <div class="jiathis_style_32x32 shares">
+            分享好友积攒人品：
+            <a href="javascript:;" class="wxin"></a>
+            <a href="javascript:;" class="jiathis_button_tsina weibo"></a>
+            <a href="javascript:;" class="jiathis_button_tqq qzone"></a>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1373120114583947" charset="utf-8"></script>
+        <script "text/javascript"> 
+        var jiathis_config = { 
+            url: "http://www.hao123.com", 
+            title: "自定义网页标题 #微博话题#", 
+            summary:"分享的文本摘要",
+            pic:"自定义分享的图片连接地址"
+        } 
+        </script> 
+        <script src="http://v2.jiathis.com/code/jiathis_r.js?move=0"></script> 
+        <!-- JiaThis 分享 END -->
+    </div>
+    <div class="part7" style="display:none;">
+        <h2 class="tou"></h2>
+        <h3 class="hxin">好心塞</h3>
+        <p class="text7">很抱歉，您的运气还差那么一点点！<strong>11.20-11.29，</strong>广州国际车展，<span>广州琶洲国际会展中心<strong>4.2</strong>号馆，</span>启辰展馆多彩绽放，诚邀您莅临现场，亲身体验！</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script>
+$(function(){
+    // part2
+    $(".changwai ul li").click(function(){
+        var x=getCookie("ind");// 获取cookie
+        if (x==10) {
+            $(".part2").fadeOut();
+            $(".part4").fadeIn();
+        };
+    });
+    $(".changwai ul li").click(function(){
+        setCookie("ind",10,7);// 设置cookie
+        var x = $(".changwai ul li").index(this);
+        $(".changwai ul li").eq(x).css("-webkit-transform","rotateY(180deg) rotateX(0deg)");
+        setTimeout(function (){
+            $(".part2").fadeOut();
+            $(".part6").fadeIn();
+        },1050);
+    });
+
+    // part6
+    $(".part6 .wxin").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-fx").fadeIn();
+    });
+    $(".pop-fx").click(function(){
+        $(".mask").fadeOut();
+        $(".pop-fx").fadeOut();
+    });
+    $(".part6 .qrtj").click(function(){
+        alert("提交成功！");
+        $(".part6 .input3").attr("value","输入手机号码");
+    });
+});
+</script>
+</body>
+</html>

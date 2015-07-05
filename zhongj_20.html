@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=0.5,user-scalable=no" />
+<title>启辰车展</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="mask" style="display:none;"></div>
+<div class="pop-fx" style="display:none;"></div>
+<div class="wrap">
+    <div class="part6">
+        <h3 class="renpin">人品不错哦！</h3>
+        <p class="text6">恭喜您抽中价值20元的手机话费！请留下联系方式，24小时内话费将为您送上，请留意短信，谢谢！</p>
+        <div class="huafei"><img src="images/y20.png" /></div>
+        <p class="text62">请输入手机号码24小时内为您充值</p>
+        <input class="input3" type="text" value="输入手机号码" onFocus="if (value =='输入手机号码'){value =''}" onBlur="if (value ==''){value='输入手机号码'}">
+        <a class="qrtj" href="javascript:;"><var>确认提交</var></a>
+        <!-- JiaThis 分享 BEGIN -->
+        <div class="jiathis_style_32x32 shares">
+            分享好友积攒人品：
+            <a href="javascript:;" class="wxin"></a>
+            <a href="javascript:;" class="jiathis_button_tsina weibo"></a>
+            <a href="javascript:;" class="jiathis_button_tqq qzone"></a>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1373120114583947" charset="utf-8"></script>
+        <script "text/javascript"> 
+        var jiathis_config = { 
+            url: "http://www.hao123.com", 
+            title: "自定义网页标题 #微博话题#", 
+            summary:"分享的文本摘要",
+            pic:"自定义分享的图片连接地址"
+        } 
+        </script> 
+        <script src="http://v2.jiathis.com/code/jiathis_r.js?move=0"></script> 
+        <!-- JiaThis 分享 END -->
+    </div>
+</div> 
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script>
+$(function() {
+    // part6
+    $(".part6 .wxin").click(function(){
+        $(".mask").fadeIn();
+        $(".pop-fx").fadeIn();
+    });
+    $(".pop-fx").click(function(){
+        $(".mask").fadeOut();
+        $(".pop-fx").fadeOut();
+    });
+    $(".part6 .qrtj").click(function(){
+        alert("提交成功！");
+        $(".part6 .input3").attr("value","输入手机号码");
+    });
+})
+</script>
+</body>
+</html>
